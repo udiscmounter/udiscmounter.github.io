@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<title>uDiscMounter, Manage virtual drive, Mount disk image files.</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+a:link {
+	color: #0000FF;
+	text-decoration: none;
+}
+a:visited {
+	color: #0000FF;
+	text-decoration: none;
+}
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+a:active {
+	color: #FF0000;
+	text-decoration: none;
+}
+.style1 {
+	font-size: medium;
+	font-weight: bold;
+}
+.style2 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style3 {
+	color: #0000FF;
+	font-weight: bold;
+}
+.style4 {color: #FF0000}
+.style5 {color: #0000FF}
+.style6 {font-size: x-small}
+.style7 {font-size: medium}
+.style9 {font-size: x-small; font-weight: bold; }
+.style13 {font-size: small; font-weight: bold; }
+.container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        textarea {
+            height: 80px;
+        }
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+-->
+</style></head>
+
+<body>
+<table width="100%" border="0" cellpadding="10" cellspacing="10">
+  <tr>
+    <td width="13%" valign="top" bgcolor="#e3e3e3"><table width="100%" border="0">
+      <tr>
+        <td><img src="img/head_logo.png" alt="uDiscMounter" width="100%" /></td>
+      </tr>
+    </table><hr />
+    <table width="100%" border="0">
+      <tr>
+        <td><strong>Home</strong></td>
+      </tr>
+      <tr>
+        <td><a href="buy/buynow.html"><strong>Buy Now </strong></a></td>
+      </tr>
+      <tr>
+        <td><a href="support/support.html"><strong>Support</strong></a></td>
+      </tr>
+      <tr>
+        <td><a href="faq/faq.html"><strong>FAQ</strong></a></td>
+      </tr>
+      <tr>
+        <td><a href="contact/contact.html"><strong>Contact</strong></a></td>
+      </tr>
+    </table>
+    <hr />
+    <table width="100%" border="0">
+      <tr>
+        <td><strong>Our Partners: </strong></td>
+      </tr>
+    </table>
+    <table width="100%" border="0">
+      <tr>
+        <td><span class="style6"><strong>IMKAN SPACE</strong></span></td>
+      </tr>
+      <tr>
+        <td><span class="style6"><a href="https://imkan.tech/" target="_blank">https://imkan.tech/</a><br />
+            <a href="mailto:noureddine@imkan.space">noureddine@imkan.space</a></span></td>
+      </tr>
+      <tr>
+        <td><span class="style9">Bluedot Technology Ltd</span></td>
+      </tr>
+      <tr>
+        <td><span class="style6"><a href="https://lkey.info/" target="_blank">https://lkey.info/</a><br />
+            <a href="mailto:info@lkey.info">info@lkey.info</a></span></td>
+      </tr>
+      <tr>
+        <td><span class="style9">Biplan Global</span></td>
+      </tr>
+      <tr>
+        <td><span class="style6"><a href="http://biplanglobal.com" target="_blank">http://biplanglobal.com</a><br />
+            <a href="mailto:info@biplanglobal.com">info@biplanglobal.com</a></span></td>
+      </tr>
+      <tr>
+        <td><span class="style9">CIRIS LTDA</span></td>
+      </tr>
+      <tr>
+        <td><span class="style6"><a href="https://www.ciris.cl/" target="_blank">https://www.ciris.cl/</a><br />
+            <a href="mailto:ventas@ciris.cl">ventas@ciris.cl</a></span></td>
+      </tr>
+    </table></td>
+    <td width="54%" valign="top"><p align="center" class="style1">uDiscMounter</p>
+    <p><strong>uDiscMounter</strong> is a tool that can manage virtual drives and mount disk image files with extensive format support on Windows.</p>
+    <p><strong>Supports</strong> nearly all known <strong>CD/DVD image file</strong> formats (.ISO, .BIN, .IMG, .CIF, .NRG, .MDS, .CCD, .BWI, .ISZ, .DMG, .DAA, .UIF, .HFS&nbsp;and so on).</p>
+    <p align="center"><strong>Comparison of uDiscMounter <span class="style4">Trial</span> and <span class="style5">Unlimited</span>, what are the benefits.</strong></p>
+    <table width="474" border="0" align="center" cellpadding="5" cellspacing="5" bgcolor="#e3e3e3">
+      <tr>
+        <td colspan="2" bgcolor="#FFFF00"><span class="style2">Trial Verison </span></td>
+        <td colspan="2" bgcolor="#FFFF00"><span class="style3">Unlimited Version </span></td>
+        </tr>
+      <tr>
+        <td width="182">Unlimited Virtual Drives </td>
+        <td width="32"><img src="img/no.png" width="20" /></td>
+        <td width="210">Unlimited Virtual Drives </td>
+        <td width="32"><img src="img/checklist.png" width="20" /></td>
+      </tr>
+      <tr>
+        <td>Lifetime Support </td>
+        <td><img src="img/no.png" width="20" /></td>
+        <td>Lifetime Support</td>
+        <td><img src="img/checklist.png" width="20" /></td>
+      </tr>
+    </table>    
+    <p align="center" class="style1">Key features</p>
+    <table width="100%" border="0" cellpadding="3" cellspacing="5">
+      <tr>
+        <td width="41%" valign="top"><span class="style5"><strong>Manage Virtual Drives </strong></span></td>
+        </tr>
+      <tr>
+        <td valign="top">Set up uDiscMounter virtual drives on Windows starting from installing virtual drive drivers and uninstalling the drivers. and set the number of virtual drives according to user needs.</td>
+        </tr>
+      <tr>
+        <td valign="top"><span class="style5"><strong>Mount and Eject Disk image files </strong></span></td>
+        </tr>
+      <tr>
+        <td valign="top">Mount a disk image file to a virtual drive to virtualize the disk image file, and to eject the disk image file on the virtual drive.</td>
+      </tr>
+      <tr>
+        <td valign="top"><span class="style5"><strong>Associate files with uDiscMounter</strong></span></td>
+      </tr>
+      <tr>
+        <td valign="top">uDiscMounter can be associated with almost all disk image formats, to see the format support, please go to the <a href="support/support.html#fileoperation"><strong>Support</strong></a> page.</td>
+      </tr>
+    </table>
+    <p align="center" class="style13">Send a quick message to the uDiscMounter support center</p>
+    <form id="telegramForm" name="telegramForm" method="post" action="">
+      <table width="100" border="0" align="center" class="container">
+        <tr>
+          <td>Name</td>
+          <td><label>
+            <input name="name" type="text" id="name" required="required" />
+          </label></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>E-mail</td>
+          <td><label>
+            <input name="email" type="email" id="email" required="required" />
+          </label></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Message</td>
+          <td><label>
+            <textarea name="message" id="message" required="required"></textarea>
+          </label></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td><label>
+            <input name="Submit" type="submit" class="btn" value="Send Message" />
+          </label></td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+    </form>
+    <hr /><span class="style6">&copy; 2015 - 2025 Ari Sohandri Putra. All rights reserved.</span></td>
+    <td width="33%" valign="top"><table width="100%" border="0" cellspacing="5">
+      <tr>
+        <td><img src="img/main_img.gif" alt="uDiscMounter Screenshot" width="100%" class="container" /></td>
+      </tr>
+      <tr>
+        <td><strong>Download uDiscMounter 25.0 (03-01-2025) </strong></td>
+      </tr>
+      <tr>
+        <td><table width="100%" border="1" cellspacing="0" bordercolor="#CCCCCC" bgcolor="f3f3f3">
+          <tr>
+            <td colspan="3" bgcolor="#00CCFF"><strong>uDiscMounter Installer </strong></td>
+          </tr>
+          <tr>
+            <td><strong><a href="#">Download</a></strong></td>
+            <td>Windows x86 x64 [TRIAL] </td>
+            <td>2.1 MB </td>
+          </tr>
+        </table></td>
+      </tr>
+      
+    </table></td>
+  </tr>
+</table>
+<script>
+    document.getElementById("telegramForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      const botToken = "7673911207:AAFYXiNg8pPbBywtMQC0rSNlj98NIh_iKig"; // Ganti dengan token bot kamu
+      const chatId = "8166553471"; // Ganti dengan chat ID kamu
+
+      // Format pesan yang dikirim
+      const fullMessage = `📩 *Pesan Baru Masuk*\n\n👤 Nama: ${name}\n📧 Email: ${email}\n💬 Pesan:\n${message}`;
+
+      const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: fullMessage,
+          parse_mode: "Markdown", // Supaya formatting lebih rapi
+        }),
+      });
+
+      const data = await response.json();
+      if (data.ok) {
+        alert("Message sent successfully!");
+        document.getElementById("telegramForm").reset();
+      } else {
+        alert("Failed to send the message: " + data.description);
+      }
+    });
+  </script>
+</body>
+</html>
