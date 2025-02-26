@@ -71,7 +71,7 @@ a:active {
 </style></head>
 
 <body>
-<table width="100%" border="0" cellpadding="10" cellspacing="10">
+<table width="100%" border="0" cellpadding="10" cellspacing="10" class="container">
   <tr>
     <td width="13%" valign="top"><div align="center" class="style1">
       <p>Download uDiscMounter </p>
@@ -79,42 +79,5 @@ a:active {
     </div></td>
   </tr>
 </table>
-<script>
-    document.getElementById("telegramForm").addEventListener("submit", async function (e) {
-      e.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
-
-      const botToken = "7673911207:AAFYXiNg8pPbBywtMQC0rSNlj98NIh_iKig"; // Ganti dengan token bot kamu
-      const chatId = "8166553471"; // Ganti dengan chat ID kamu
-
-      // Format pesan yang dikirim
-      const fullMessage = `📩 *Pesan Baru Masuk*\n\n👤 Nama: ${name}\n📧 Email: ${email}\n💬 Pesan:\n${message}`;
-
-      const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: fullMessage,
-          parse_mode: "Markdown", // Supaya formatting lebih rapi
-        }),
-      });
-
-      const data = await response.json();
-      if (data.ok) {
-        alert("Message sent successfully!");
-        document.getElementById("telegramForm").reset();
-      } else {
-        alert("Failed to send the message: " + data.description);
-      }
-    });
-  </script>
 </body>
 </html>
