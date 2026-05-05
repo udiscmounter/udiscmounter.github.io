@@ -45,11 +45,40 @@ a:active {
 	font-style: italic;
 	color: #999999;
 }
+.donation-bar {
+    width: 100%;
+    background: White;
+    color: Black;
+    font-size: 15px;
+    text-align: center;
+    padding: 6px 0;
+}
+
+  .donation-text {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+
+  .donation-text.show {
+    opacity: 1;
+  }
+.style6 {
+	color: #FF0000;
+	font-weight: bold;
+	font-size: large;
+}
+.style7 {
+	color: #0033FF;
+	font-weight: bold;
+	font-size: large;
+}
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body class="sub">
+
 <table width="90%" border="0" cellpadding="4" cellspacing="2" style="text-align: center">
+   
    <tr>
     <td width="40%" align="left" style="vertical-align: top">
       <table width="100%" border="0">
@@ -60,8 +89,7 @@ a:active {
          </tr>
        </table>
       <p data-start="27" data-end="417"><strong>uDiscMounter</strong> is a utility <em><strong>program</strong></em> designed to create a virtual drive on your computer, so you can mount disc image files and use them like real <a href="https://en.wikipedia.org/wiki/Compact_disc" target="_blank">CDs</a> or <a href="https://en.wikipedia.org/wiki/DVD" target="_blank">DVDs</a>. It’s built to be simple and easy to use, with a clean interface that makes exploring and managing disc images feel straightforward. When you open the program, everything is clearly laid out, so you can <em><strong>mount</strong></em> your images in just a few clicks.</p>
-      <p data-start="419" data-end="924">The <em><strong>program</strong></em> features a user-friendly graphical interface that makes handling disk images much easier. You can load one or multiple image files and choose which one you want to mount on your <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" target="_blank">Windows</a> system. Once mounted, it automatically creates a virtual drive, allowing you to browse everything inside it directly through <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" target="_blank">Windows</a> Explorer. The main window also shows a clear list of supported formats, so it’s easy to see that it works not only with <a href="https://en.wikipedia.org/wiki/Compact_disc" target="_blank">CD</a> or <a href="https://en.wikipedia.org/wiki/DVD" target="_blank">DVD</a> images, but also with many other file types <a href="help"><strong><em>Read More &gt;&gt;</em></strong></a></p>
-     </td>
+      <p data-start="419" data-end="924">The <em><strong>program</strong></em> features a user-friendly graphical interface that makes handling disk images much easier. You can load one or multiple image files and choose which one you want to mount on your <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" target="_blank">Windows</a> system. Once mounted, it automatically creates a virtual drive, allowing you to browse everything inside it directly through <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" target="_blank">Windows</a> Explorer. The main window also shows a clear list of supported formats, so it’s easy to see that it works not only with <a href="https://en.wikipedia.org/wiki/Compact_disc" target="_blank">CD</a> or <a href="https://en.wikipedia.org/wiki/DVD" target="_blank">DVD</a> images, but also with many other file types <a href="help"><strong><em>Read More &gt;&gt;</em></strong></a></p>     </td>
     <td width="170" align="center" style="vertical-align: top">
       <a href="#"><img src="img/capture-preview.png" alt="uDiscMounter Main Window" name="image" width="480" hspace="0" vspace="0" border="0"></a><br>
       <em>Capture: Main Window </em>
@@ -74,7 +102,8 @@ a:active {
           <td align="center">910 KB</td>
          </tr>
        </table>
-    <p class="StoryTitle">&nbsp;</p></td>
+    <p class="StoryTitle"><span class="style6">128,940+ </span>downloads worldwide<br>
+          <span class="style7">2,000+</span> donors worldwide</p></td>
     <td width="30%" style="vertical-align: top">
       <table width="100%" border="0" cellspacing="0" cellpadding="1">
          <tr>
@@ -121,8 +150,12 @@ a:active {
     <img src="https://www.paypalobjects.com/images/Debit_Credit.svg" alt="cards">
     <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"></section>
   </form>
-</div>
-                </td>
+</div>                </td>
+               </tr>
+               <tr>
+                 <td valign="top"><div class="donation-bar">
+  <span id="donationText" class="donation-text"></span>
+</div></td>
                </tr>
              </table>           </td>
          </tr>
@@ -149,5 +182,7 @@ a:active {
      </table></td>
    </tr>
 </table>
+<script src="donations.js"></script>
+
 </body>
 </html>
