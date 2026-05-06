@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<!-- Credit: Ari Sohandri Putra, written on 15/05/2015 -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Credit - uDiscMounter Developer</title>
@@ -21,6 +20,7 @@
 <meta name="twitter:description" content="Software developer focused on low-level programming and hardware tools.">
 <meta name="twitter:image" content="https://udiscmounter.github.io/img/credit.jpg">
 <meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
 <style type="text/css">
 .style1 {
 	color: #0000FF;
@@ -31,17 +31,35 @@
 	color: #FF0000;
 	font-weight: bold;
 }
-a:link {
-	color: #0000FF;
+a:link { color: #0000FF; }
+a:visited { color: #0000FF; }
+a:hover { color: #FF0000; }
+a:active { color: #0000FF; }
+
+.syntax-block {
+	position: relative;
+	margin: 8px 0;
 }
-a:visited {
-	color: #0000FF;
+
+.copy-btn {
+	position: absolute;
+	top: 6px;
+	right: 8px;
+	padding: 2px 10px;
+	font-size: 11px;
+	background: #0000FF;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	font-family: Arial, sans-serif;
+	z-index: 10;
 }
-a:hover {
-	color: #FF0000;
-}
-a:active {
-	color: #0000FF;
+.copy-btn:hover { background: #FF0000; }
+.copy-btn.copied { background: #008000; }
+
+pre[class*="language-"] {
+	font-size: 12px;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -55,37 +73,260 @@ a:active {
       </td>
       <td width="100%" class="StoryContentColor">
         <h4>Credit</h4>
-        <p align="left" data-start="0" data-end="415"><strong><em>Ari Sohandri Putra</em></strong> is a software developer with over a decade of experience, specializing in low-level programming and hardware-related systems. He is also the founder of <span class="style2">ARIMetic.</span> Much of his work focuses on exploring how software interacts with hardware, leading him to develop tools like <a href="https://hardmon.github.io/">HardMon</a>, <a href="https://heatmon.github.io/" target="_blank">HeatMon</a> for temperature monitoring, and <a href="https://ubattery.github.io/" target="_blank">uBattery</a> for analyzing the health and behavior of laptop and UPS batteries.</p>
-        <p align="left" data-start="417" data-end="586">He is passionate about building practical tools that help users better understand and manage their devices, especially in areas like performance and hardware monitoring.</p>
-        <p align="left" data-start="1744" data-end="1756" data-is-last-node="" data-is-only-node=""><span class="style1">Find Ari at</span>: <a href="https://codenomaden.blogspot.com/" target="_blank"><strong>CodeNomaden</strong></a> (Personal Blog)</p><hr />
-        <p><strong>About uDiscMounter</strong></p>
-        <p align="left" data-start="101" data-end="484">It all started back in 2012, when Ari got frustrated with the limited <em>disk mounting</em> tools available on Windows at the time. Most of them were either too heavy, too complicated, or locked behind paid licenses. He wanted something simple, lightweight, and fast something that just worked without getting in the way.</p>
-        <p align="left" data-start="486" data-end="733">So he began building a small prototype in his spare time. The early version was very basic, it could only mount<strong><em> ISO</em></strong> files and was full of bugs. But instead of giving up, Ari kept experimenting, slowly understanding how Windows handled disk images.</p>
-        <p align="left" data-start="735" data-end="818">But the real challenge began when he decided to build his own <em><strong>virtual drive driver</strong></em>.</p>
-        <p align="left" data-start="820" data-end="1076">At that time, he started working with <em><a href="https://www.microsoft.com/en-us/download/details.aspx?id=11800" target="_blank">Windows Driver Kit 7.1.0</a></em>. It was far from beginner-friendly. The documentation felt incomplete, examples were confusing, and even getting a simple driver to load without crashing the system was a struggle.</p>
-        <p align="left" data-start="1078" data-end="1363">There were nights where his system would suddenly crash into a blue screen. Sometimes the driver failed silently. Other times, it worked&hellip; but only once, then refused to load again. Debugging kernel-level code was a completely different world compared to normal application development.</p>
-        <p align="left" data-start="1365" data-end="1659">He spent weeks just trying to understand how to properly register a virtual device, how IRP requests worked, and how to safely handle mounting operations without corrupting memory. At one point, a tiny mistake in pointer handling caused endless crashes, and he had no idea why until days later.</p>
-        <p align="left" data-start="1661" data-end="1951">There was even a moment where he almost gave up. The driver simply refused to mount any image file consistently. Everything looked correct, but nothing worked. It turned out to be a small synchronization issue deep inside the driver logic something that took nearly two weeks to figure out.</p>
-        <p align="left" data-start="1953" data-end="1990">But that struggle changed everything.</p>
-        <p align="left" data-start="1992" data-end="2122">Once the driver finally worked reliably, it became the core of what would later evolve into uDiscMounter.</p>
-        <p align="left" data-start="2124" data-end="2374">After nearly three years of development, in 2015, the first public version was released. It was still simple, but it was stable and more importantly, it worked. Users quickly noticed how lightweight and straightforward it was compared to other tools.</p>
-        <p align="left" data-start="2376" data-end="2490">As time went on, uDiscMounter kept evolving. Each new version introduced improvements and useful features such as:</p>
-        <div align="left">
-          <ul data-start="2491" data-end="2629">
-            <li data-section-id="n3gr46" data-start="2491" data-end="2518"> Multiple virtual drives </li>
-            <li data-section-id="161gztr" data-start="2545" data-end="2589"> Right-click integration in File Explorer </li>
-            <li data-section-id="mdehe3" data-start="2590" data-end="2629"> Support for more disk image formats</li>
-          </ul>
+        <p align="left"><strong><em>Ari Sohandri Putra</em></strong> is a software developer with over a decade of experience, specializing in low-level programming and hardware-related systems. He is also the founder of <span class="style2">ARIMetic.</span> Much of his work focuses on exploring how software interacts with hardware, leading him to develop tools like <a href="https://hardmon.github.io/" target="_blank">HardMon</a>, <a href="https://heatmon.github.io/" target="_blank">HeatMon</a> for temperature monitoring, and <a href="https://ubattery.github.io/" target="_blank">uBattery</a> for analyzing the health and behavior of laptop and UPS batteries.</p>
+        <p align="left">He is passionate about building practical tools that help users better understand and manage their devices, especially in areas like performance and hardware monitoring.</p>
+        <p align="left"><span class="style1">Find Ari at</span>: <a href="https://codenomaden.blogspot.com/" target="_blank"><strong>CodeNomaden</strong></a> (Personal Blog)</p>
+        <hr />
+
+        <p><strong>uDiscMounter - Driver Architecture</strong></p>
+
+        <p align="left"><strong>1. Introduction</strong></p>
+        <p align="left">uDiscMounter is a <strong>virtual drive system</strong> that allows a disk image (such as ISO) to be mounted as if it were a <strong>real physical CD/DVD device</strong>.</p>
+        <p align="left">Unlike a normal application, the core functionality relies on a <strong>kernel-mode driver</strong>, which integrates directly with the Windows storage stack. This driver makes the operating system believe that a real storage device exists, even though all data actually comes from a file.</p>
+
+        <p align="left"><strong>2. High-Level Architecture</strong></p>
+        <p align="left">The system is split into two main layers:</p>
+        <div class="syntax-block">
+          <button class="copy-btn" data-target="code-arch">Copy</button>
+          <pre><code class="language-none" id="code-arch">[ User Mode ]
+---------------------------------
+uDiscMounter Application
+    |
+    | IOCTL (DeviceIoControl)
+    v
+
+[ Kernel Mode ]
+---------------------------------
+uDiscMounter Driver
+    |
+    v
+Windows Storage Stack
+(File System &#x2192; Class Driver &#x2192; SCSI)</code></pre>
         </div>
-        <p align="left" data-start="2631" data-end="2832">Around versions 18 to 22, the software reached its peak popularity. It became a quiet favorite among IT technicians and everyday users who just needed something reliable without unnecessary complexity.</p>
-        <p align="left" data-start="2834" data-end="3103">But the landscape began to change with the arrival of <a href="https://www.microsoft.com/en-us/software-download/windows10" target="_blank">Windows 10</a> and later <a href="https://www.microsoft.com/en-us/software-download/windows11" target="_blank">Windows 11</a>. Microsoft introduced built-in ISO mounting directly in File Explorer, reducing the need for third-party tools like uDiscMounter.</p>
-        <p align="left" data-start="3105" data-end="3276">Even so, Ari continued refining the project until version <a href="/">26.0</a>. This version stood as one of the most stable releases, with broad format support and optimized performance.</p>
-        <p align="left" data-start="3278" data-end="3516">Over time, development slowed down. Not because the passion was gone, but because the original problem had largely been solved by the operating system itself. What once required deep system-level engineering had become a built-in feature.</p>
-        <p align="left" data-start="3518" data-end="3750">Today, uDiscMounter is still maintained occasionally and used by a niche group of users who need advanced functionality beyond what Windows provides. Major updates are rare, and Ari has shifted his focus to other ideas and projects.</p>
-        <p align="left" data-start="3752" data-end="3858">But if you look back, the most important part of the journey wasn&rsquo;t the final version or the feature list.</p>
-        <p align="left" data-start="3860" data-end="4011">It was those long nights struggling with kernel code, chasing down crashes, and finally seeing a virtual drive appear in the system for the first time.</p>
-        <p align="left" data-start="4013" data-end="4065">For Ari, that moment alone made everything worth it.</p>        
-        </td>
+
+        <p align="left"><strong>Key Idea</strong></p>
+        <p align="left">The driver emulates a CD-ROM device, and translates:</p>
+        <div class="syntax-block">
+          <button class="copy-btn" data-target="code-lba">Copy</button>
+          <pre><code class="language-none" id="code-lba">Disk Request (LBA-based)
+        &#x2193;
+File Offset (inside ISO file)</code></pre>
+        </div>
+
+        <p align="left"><strong>3. Windows Storage Stack Integration</strong></p>
+        <p align="left">When a file is accessed from the mounted drive, the request flows through several layers:</p>
+        <div class="syntax-block">
+          <button class="copy-btn" data-target="code-stack">Copy</button>
+          <pre><code class="language-none" id="code-stack">Application (Read File)
+        &#x2193;
+File System (CDFS / UDF)
+        &#x2193;
+Class Driver (cdrom.sys)
+        &#x2193;
+SCSI Request (SRB + CDB)
+        &#x2193;
+uDiscMounter Driver
+        &#x2193;
+ISO File (on disk)</code></pre>
+        </div>
+
+        <p align="left"><strong>4. SCSI Emulation Concept</strong></p>
+        <p align="left">Windows communicates with storage devices using SCSI commands.</p>
+        <p align="left">Example: READ(10) command</p>
+        <div class="syntax-block">
+          <button class="copy-btn" data-target="code-scsi">Copy</button>
+          <pre><code class="language-none" id="code-scsi">CDB Structure:
+---------------------------------
+Byte 0  : Operation Code (0x28)
+Byte 2-5: LBA (Logical Block Address)
+Byte 7-8: Transfer Length
+
+Your driver receives this and must respond as if it were real hardware.</code></pre>
+        </div>
+
+        <p align="left"><strong>5. Core Translation Logic</strong></p>
+        <p align="left">This is the heart of the system:</p>
+        <div class="syntax-block">
+          <button class="copy-btn" data-target="code-logic">Copy</button>
+          <pre><code class="language-none" id="code-logic">LBA (sector index)
+        &#x2193;
+Offset = LBA * SectorSize (2048 for ISO)
+        &#x2193;
+Read from ISO file
+        &#x2193;
+Return data to OS</code></pre>
+        </div>
+
+        <p align="left"><strong>6. Driver Initialization (C++)</strong></p>
+        <div class="syntax-block">
+          <button class="copy-btn" data-target="code-init">Copy</button>
+          <pre><code class="language-cpp" id="code-init">#include &lt;ntddk.h&gt;
+
+NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)
+{
+    UNREFERENCED_PARAMETER(RegistryPath);
+
+    DriverObject->MajorFunction[IRP_MJ_CREATE] = DispatchCreateClose;
+    DriverObject->MajorFunction[IRP_MJ_CLOSE]  = DispatchCreateClose;
+    DriverObject->MajorFunction[IRP_MJ_DEVICE_CONTROL] = DispatchDeviceControl;
+    DriverObject->MajorFunction[IRP_MJ_SCSI] = DispatchScsi;
+
+    DriverObject->DriverUnload = DriverUnload;
+
+    IoCreateDevice(
+        DriverObject,
+        0,
+        L"\\Device\\uDiscMounter",
+        FILE_DEVICE_CD_ROM,
+        0,
+        FALSE,
+        &amp;g_DeviceObject
+    );
+
+    return STATUS_SUCCESS;
+}</code></pre>
+        </div>
+
+        <p align="left"><strong>7. Mounting an Image</strong></p>
+        <p align="left">When the user mounts an ISO:</p>
+        <div class="syntax-block">
+          <button class="copy-btn" data-target="code-mount">Copy</button>
+          <pre><code class="language-cpp" id="code-mount">NTSTATUS OpenImageFile(PCWSTR path)
+{
+    OBJECT_ATTRIBUTES attr;
+    IO_STATUS_BLOCK io;
+    UNICODE_STRING uPath;
+
+    RtlInitUnicodeString(&amp;uPath, path);
+
+    InitializeObjectAttributes(
+        &amp;attr,
+        &amp;uPath,
+        OBJ_CASE_INSENSITIVE | OBJ_KERNEL_HANDLE,
+        NULL,
+        NULL
+    );
+
+    return ZwCreateFile(
+        &amp;g_ImageHandle,
+        GENERIC_READ,
+        &amp;attr,
+        &amp;io,
+        NULL,
+        FILE_ATTRIBUTE_NORMAL,
+        FILE_SHARE_READ,
+        FILE_OPEN,
+        FILE_NON_DIRECTORY_FILE,
+        NULL,
+        0
+    );
+}</code></pre>
+        </div>
+
+        <p align="left"><strong>8. Handling SCSI Requests</strong></p>
+        <p align="left">This is where the driver behaves like a real device.</p>
+        <div class="syntax-block">
+          <button class="copy-btn" data-target="code-scsi-handler">Copy</button>
+          <pre><code class="language-cpp" id="code-scsi-handler">NTSTATUS DispatchScsi(PDEVICE_OBJECT DeviceObject, PIRP Irp)
+{
+    PIO_STACK_LOCATION stack = IoGetCurrentIrpStackLocation(Irp);
+    PSCSI_REQUEST_BLOCK srb = (PSCSI_REQUEST_BLOCK)stack->Parameters.Scsi.Srb;
+
+    UCHAR op = srb->Cdb[0];
+
+    switch (op)
+    {
+        case SCSIOP_READ:
+        {
+            ULONG lba =
+                (srb->Cdb[2] &lt;&lt; 24) |
+                (srb->Cdb[3] &lt;&lt; 16) |
+                (srb->Cdb[4] &lt;&lt; 8)  |
+                (srb->Cdb[5]);
+
+            ULONG sectors =
+                (srb->Cdb[7] &lt;&lt; 8) |
+                (srb->Cdb[8]);
+
+            LARGE_INTEGER offset;
+            offset.QuadPart = (LONGLONG)lba * 2048;
+
+            IO_STATUS_BLOCK io;
+
+            ZwReadFile(
+                g_ImageHandle,
+                NULL,
+                NULL,
+                NULL,
+                &amp;io,
+                srb->DataBuffer,
+                sectors * 2048,
+                &amp;offset,
+                NULL
+            );
+
+            srb->SrbStatus = SRB_STATUS_SUCCESS;
+            Irp->IoStatus.Status = STATUS_SUCCESS;
+            break;
+        }
+
+        default:
+            srb->SrbStatus = SRB_STATUS_INVALID_REQUEST;
+            Irp->IoStatus.Status = STATUS_NOT_SUPPORTED;
+            break;
+    }
+
+    IoCompleteRequest(Irp, IO_NO_INCREMENT);
+    return STATUS_SUCCESS;
+}</code></pre>
+        </div>
+
+        <p align="left"><strong>9. Low-Level (Assembly Perspective)</strong></p>
+        <p align="left">At the lowest level, the operation becomes:</p>
+        <div class="syntax-block">
+          <button class="copy-btn" data-target="code-asm">Copy</button>
+          <pre><code class="language-nasm" id="code-asm">; Convert LBA to file offset
+
+mov     rax, rcx        ; rcx = LBA
+imul    rax, 2048       ; sector size
+
+; Call ZwReadFile using offset
+
+mov     rcx, g_ImageHandle
+call    ZwReadFile</code></pre>
+        </div>
+
+        <p align="left"><strong>10. Unmount Process</strong></p>
+        <p align="left">When the drive is removed:</p>
+        <div class="syntax-block">
+          <button class="copy-btn" data-target="code-unmount">Copy</button>
+          <pre><code class="language-none" id="code-unmount">- Close ISO file (ZwClose)
+- Remove symbolic link
+- Delete device object
+- Driver releases memory</code></pre>
+        </div>
+
+        <p align="left"><strong>11. Key Technical Characteristics</strong></p>
+        <div class="syntax-block">
+          <button class="copy-btn" data-target="code-chars">Copy</button>
+          <pre><code class="language-none" id="code-chars">Runs in kernel mode
+Emulates a SCSI CD-ROM device
+Uses file-backed storage (ISO)
+Translates LBA &#x2192; file offset
+Typically read-only
+Integrates into Windows storage stack</code></pre>
+        </div>
+
+        <p align="left"><strong>12. Conclusion</strong></p>
+        <p align="left">uDiscMounter works by bridging two worlds:</p>
+        <div class="syntax-block">
+          <button class="copy-btn" data-target="code-conclusion">Copy</button>
+          <pre><code class="language-none" id="code-conclusion">The OS expects a hardware storage device
+The driver provides a software-backed illusion</code></pre>
+        </div>
+        <p align="left">By implementing SCSI command handling and translating requests into file operations, the system achieves a seamless virtual drive experience.</p>
+
+      </td>
     </tr>
   </table>
 </form>
@@ -94,8 +335,41 @@ a:active {
     <td width="15%" style="white-space: nowrap">&nbsp;</td>
     <td width="70%" style="text-align: center; white-space: nowrap">&nbsp;</td>
     <td style="text-align: right; white-space: nowrap" width="15%">
-      <a href="/">&lt;&lt; Back Home</a></td>
+      <a href="/">&lt;&lt; Back Home</a>
+    </td>
   </tr>
 </table>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-nasm.min.js"></script>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        var el = document.getElementById(btn.getAttribute('data-target'));
+        if (!el) return;
+        var text = el.innerText;
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(text).then(function() {
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+            });
+        } else {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+        }
+    });
+});
+</script>
+
 </body>
 </html>
