@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Credit: Ari Sohandri Putra, written on 15/05/2015 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frequently Asked Questions (FAQ) - uDiscMounter</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta name="description" content="Frequently asked questions about uDiscMounter. Learn about integrating it into your own application, updating the number of virtual drives, and why Windows Defender sometimes flags it as a false positive.">
+<meta name="keywords" content="uDiscMounter FAQ, uDiscMounter questions, uDiscMounter integrate, uDiscTools, virtual drive not updated, uDiscMounter virus, Windows Defender false positive, uDiscMounter help">
+<meta name="author" content="Ari Sohandri Putra">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://udiscmounter.github.io/faq.html">
+<meta property="og:title" content="Frequently Asked Questions (FAQ) - uDiscMounter">
+<meta property="og:description" content="Answers to common questions about uDiscMounter: integration, virtual drive setup, and antivirus false positives.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://udiscmounter.github.io/faq.html">
+<meta property="og:image" content="https://udiscmounter.github.io/img/head_logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Frequently Asked Questions (FAQ) - uDiscMounter">
+<meta name="twitter:description" content="Answers to common questions about uDiscMounter: integration, virtual drive setup, and antivirus false positives.">
+<meta name="twitter:image" content="https://udiscmounter.github.io/img/head_logo.png">
+<meta name="theme-color" content="#ffffff">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+a:link {
+	color: #0000FF;
+}
+a:visited {
+	color: #0000FF;
+}
+a:hover {
+	color: #FF0000;
+}
+a:active {
+	color: #0000FF;
+}
+</style>
+</head>
+<body class="sub">
+<table width="90%" border="0" style="text-align: center" cellpadding="4" cellspacing="2">
+    <tr>
+    <td colspan="2">      <h2 class="HeaderColor">Frequently Ask Questions (FAQ) <br>
+    </h2>     </td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top" width="100%">&nbsp;</td>
+    <td style="vertical-align: top" rowspan="2"><img src="img/head_logo.png" alt=" image" name="image" width="150" height="150" id="image" /> </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" class="StoryContentColor"><div id="ask1"><p><strong>Can I integrate uDiscMounter as an underlying engine in my own application?</strong></p>
+      <blockquote>
+        <p>Yes. You can integrate uDiscMounter into your application, provided that the required copyright notice is included.</p>
+        <p>To use uDiscMounter and launch or control it from your application, uDiscMounter must be installed on the target system alongside your application.</p>
+        <p>In the future, we are planning to develop a dedicated developer library called <strong>uDiscTools</strong>. This library will allow developers to integrate uDiscMounter's disk image mounting capabilities directly into their applications without requiring uDiscMounter itself to be installed on the system. The library can be directly integrated into your application's project.</p>
+        <p>Learn more: <a href="content/cli.html">&#9658;uDiscMounter Command-Line Arguments</a></p>
+        </blockquote></div>
+      <div id="ask2"><p><strong>Why is the number of virtual drives not updated after changing the setting?</strong></p>
+      <blockquote>
+        <p>See the following article: <a href="content/virtualdrive.html">&#9658;How to add a virtual drive in uDiscMounter</a></p>
+        <p>After changing the number of Virtual Drives, you must <strong>restart your system</strong> for the changes to take effect.</p>
+      </blockquote></div>
+      <div id="ask3"><p><strong>Why is uDiscMounter detected as a virus or malware by Windows Defender?</strong></p>
+      <blockquote>
+        <p>On Windows 10/11, particularly with recent security updates, Windows Defender or other antivirus software may sometimes detect uDiscMounter as a virus or malware.</p>
+        <p>This does not necessarily mean that uDiscMounter is actually a virus. The detection may be caused by a<strong> false positive</strong> due to the way uDiscMounter interacts with the Windows kernel and system drivers. uDiscMounter uses the uDiscTools driver to perform low-level operations such as mounting and ejecting disk image files. These operations require system-level access, which may cause security software to classify uDiscMounter or its associated components as potentially malicious.</p>
+        <p>If you want to investigate a detection in more detail, you can scan the uDiscMounter executable (.exe) installed on your system using <a href="https://www.virustotal.com/" target="_blank"><strong>VirusTotal</strong></a> and review the detection results from multiple antivirus engines.</p>
+        <p>Please note that antivirus detections can vary between security vendors and may change over time. A detection by one or more engines does not, by itself, establish that a file is malicious.</p>
+      </blockquote></div></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="left">
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<p><a href="/">&lt;&lt; Back Home </a></p>
+</body>
+</html>
